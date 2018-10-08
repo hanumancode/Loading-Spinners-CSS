@@ -13,11 +13,42 @@
         <p>Three loading spinners made with pure CSS3. 
             <br>
             <input type="button" value="Reload Page" onClick="window.location.reload()">
+            <button onclick="spin1()">Click me for Spinner 1</button>
+            <button onclick="spin2()">Click me for Spinner 2</button>
+            <button onclick="spin3()">Click me for Spinner 3</button>
+
         </p>
         
     </div>
 
     <script>
+
+    function spin1() {
+        // hide by default
+        document.querySelector('.main p').style.display = "none";
+        document.querySelector('.main').classList.add('spinner-1');
+
+        // set timeout to load p text
+        setTimeout(() => {
+            document.querySelector('.main').classList.remove('spinner-1');
+            document.querySelector('.main p').style.display = "block";
+        }, 4000);
+
+    };
+
+    function spin2() {
+        // hide by default
+        document.querySelector('.main p').style.display = "none";
+        document.querySelector('.main').classList.add('spinner-2');
+
+        // set timeout to load p text
+        setTimeout(() => {
+            document.querySelector('.main').classList.remove('spinner-2');
+            document.querySelector('.main p').style.display = "block";
+        }, 4000);
+    };
+
+    function spin3() {
         // hide by default
         document.querySelector('.main p').style.display = "none";
         document.querySelector('.main').classList.add('spinner-3');
@@ -27,7 +58,9 @@
             document.querySelector('.main').classList.remove('spinner-3');
             document.querySelector('.main p').style.display = "block";
         }, 4000);
+    };
+
     </script>
-    
+
 </body>
 </html>
