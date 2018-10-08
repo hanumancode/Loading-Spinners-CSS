@@ -23,6 +23,15 @@
 
     <script>
 
+    document.querySelector('.main p').style.display = "none";
+    document.querySelector('.main').classList.add('spinner-1');
+
+    // set timeout to load p text
+    setTimeout(() => {
+        document.querySelector('.main').classList.remove('spinner-1');
+        document.querySelector('.main p').style.display = "block";
+    }, 4000);
+            
     function spin1() {
         // hide by default
         document.querySelector('.main p').style.display = "none";
@@ -33,7 +42,6 @@
             document.querySelector('.main').classList.remove('spinner-1');
             document.querySelector('.main p').style.display = "block";
         }, 4000);
-
     };
 
     function spin2() {
