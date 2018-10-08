@@ -8,9 +8,26 @@
     <title>Loading Spinners with CSS</title>
 </head>
 <body>
-    <div class="main spinner-1">
+    <div class="main">
         <h1><a href="https://gljmedia.com/">Welcome to GLJMedia.com</a></h1>
-        <p>Three loading spinners made with CSS3</p>
+        <p>Three loading spinners made with pure CSS3. 
+            <br>
+            <input type="button" value="Reload Page" onClick="window.location.reload()">
+        </p>
+        
     </div>
+
+    <script>
+        // hide by default
+        document.querySelector('.main p').style.display = "none";
+        document.querySelector('.main').classList.add('spinner-3');
+
+        // set timeout to load p text
+        setTimeout(() => {
+            document.querySelector('.main').classList.remove('spinner-3');
+            document.querySelector('.main p').style.display = "block";
+        }, 4000);
+    </script>
+    
 </body>
 </html>
